@@ -44,4 +44,13 @@ interface HelloDialogHandlerInterface
      */
     public function getTemplateContents($templateId, array $replaces = []);
 
+    /**
+     * Checks if email exists in HelloDialog. Note that it only checks whether it exists
+     * as a confirmed contact.
+     *
+     * @param string $email
+     * @return bool
+     */
+    public function checkIfEmailExists($email);
+
 }
