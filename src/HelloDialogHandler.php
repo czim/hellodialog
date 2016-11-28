@@ -253,10 +253,13 @@ class HelloDialogHandler implements HelloDialogHandlerInterface
 
 
     /**
+     * Checks if email exists in HelloDialog. Note that it only checks whether it exists
+     * as a confirmed contact.
+     *
      * @param string $email
      * @return bool
      */
-    protected function checkIfEmailExists($email)
+    public function checkIfEmailExists($email)
     {
         $existance = $this->getApiInstance(static::API_CONTACTS)
             ->condition('email', $email, 'equals')
